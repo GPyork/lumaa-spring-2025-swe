@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My TODO List</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <h3>Navigation</h3>
+      <ul>
+        <li id="all" class="nav-item" onclick="selectTab('all')">All Lists</li>
+        <li id="not-done" class="nav-item" onclick="selectTab('not done')">Incomplete</li>
+        <li id="done" class="nav-item" onclick="selectTab('done')">Complete</li>
+        <li><a href="/add-todo.html" class="add-todo-button">Add TODO</a></li>
+        <li><button onclick="logout()">Logout</button></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <h1>My TODO List</h1>
+      <table id="todoTable">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="../js/todo.js"></script>
+</body>
+
+</html>

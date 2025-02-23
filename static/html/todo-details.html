@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO Details</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="/todo.html">Back to TODO List</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <h1 id="todo-title"></h1>
+      <p>
+        <strong>Description:</strong>
+        <span id="todo-description"></span>
+        <button id="edit-description-btn">Edit</button>
+      </p>
+      <div id="edit-description-form" style="display: none;">
+        <textarea id="description-input" rows="10" cols="50"></textarea>
+        <button id="save-description-btn">Save</button>
+      </div>
+      <p><strong>Status:</strong> <span id="todo-status"></span></p>
+    </main>
+
+    <aside class="comments-section">
+      <h2>Comments</h2>
+      <ul id="comment-list">
+
+      </ul>
+      <form id="comment-form">
+        <label for="comment">Add a Comment:</label>
+        <input type="text" id="comment" name="comment" required>
+        <button type="submit">Add Comment</button>
+      </form>
+    </aside>
+  </div>
+
+  <script src="../js/todo-details.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title TODO List
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 TODO List Application
+
+    form(action="/add-todo", method="POST")
+      input(type="text", name="title", placeholder="Enter TODO title" required)
+      textarea(name="description", placeholder="Enter description")
+      button(type="submit") Add TODO
+
+    ul
+      each todo in todos
+        li
+          | #{todo.title} - #{todo.status}
+          form(action=`/update-todo/${todo.id}`, method="POST")
+            select(name="status")
+              option(value="done", selected=todo.status === 'done') Done
+              option(value="not done", selected=todo.status === 'not done') Not Done
+            button(type="submit") Update
+          form(action=`/delete-todo/${todo.id}`, method="POST", onsubmit="return confirm('Delete this task?');")
+            button(type="submit") Delete
